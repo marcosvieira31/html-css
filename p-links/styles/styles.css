@@ -7,13 +7,19 @@
 
 body{
     background: #007ABF;
+
+    height: 100vh;
+    padding: 10px;
     
     display: grid;
     grid-template-areas:
     "header header"
     "main aside"
-    "footer footer";
-    padding: 10px;
+    "footer aside";
+
+    grid-template-rows: 75px 1fr 40px;
+    grid-template-columns: 1fr 100px;
+    
 
 }
 
@@ -24,7 +30,9 @@ body{
 
 header{
     grid-area: header;
-    height: 100px;
+
+    padding: 10px 0;
+   /*  height: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +41,8 @@ header{
 main{
     font-family: 'Lato', sans-serif;
     grid-area: main;
+
+    padding: 0 10px;
 }
 
 aside{
@@ -40,6 +50,10 @@ aside{
     font-weight: 300;
 
     grid-area: aside;    
+}
+
+ul {
+    padding: 0 0 0 25px;
 }
 
 footer{
